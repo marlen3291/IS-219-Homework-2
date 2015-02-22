@@ -1,3 +1,4 @@
+//This is the file that will run the app for Assignment 2
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -21,9 +22,12 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('public/javascripts', express.static(path.join(__dirname, 'public/javascripts')));
+app.use('public/stylesheets', express.static(path.join(__dirname, 'public/stylesheets')));
 
 app.use('/', routes);
 app.use('/users', users);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -58,3 +62,17 @@ app.use(function(err, req, res, next) {
 
 
 module.exports = app;
+
+
+var server = app.listen(3000, function () {
+
+  var host = server.address().address
+  var port = server.address().port
+
+  console.log('Example app listening at http://%s:%s', host, port)
+
+})
+
+
+
+
