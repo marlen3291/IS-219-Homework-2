@@ -1,0 +1,18 @@
+doctype html
+html 
+	include ./head.jade
+	body
+		include ./navbar.jade
+		.jumbotron
+			.container
+				h1 Hello visitor of IS 219!       
+				p
+					| This page is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.      
+				p
+					a.btn.btn-primary.btn-lg(href='#', role='button') Learn more &raquo;
+		include ./container.jade
+		include ./footer.jade
+		script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js')     
+		script(src='../../dist/js/bootstrap.min.js')
+		// IE10 viewport hack for Surface/desktop Windows 8 bug
+		script(src='../../assets/js/ie10-viewport-bug-workaround.js')

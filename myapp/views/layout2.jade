@@ -1,0 +1,30 @@
+//index.jade
+
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+
+
+// -index2.jade
+doctype html
+html 
+	include ./includes/head.jade
+	body
+		include ./includes/navbar.jade
+		.jumbotron
+			.container
+				h1 Hello, world!
+				|         
+				p
+				  | This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.
+				|         
+				p
+				  a.btn.btn-primary.btn-lg(href='#', role='button') Learn more &raquo;
+		include ./includes/foot.jade
+		script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js')     
+		script(src='../../dist/js/bootstrap.min.js')
+		// IE10 viewport hack for Surface/desktop Windows 8 bug
+		script(src='../../assets/js/ie10-viewport-bug-workaround.js')
