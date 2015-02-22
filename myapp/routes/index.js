@@ -1,3 +1,4 @@
+//The index page is index2.js not index.js
 var express = require('express');
 var router = express.Router();
 
